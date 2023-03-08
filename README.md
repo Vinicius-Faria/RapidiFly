@@ -1,41 +1,46 @@
-RapidiFly
-RapidiFly é uma aplicação de delivery de comida que permite que os usuários pesquisem, escolham e paguem por seus pedidos em um só lugar. A plataforma é composta por um aplicativo móvel para usuários e uma interface web para os restaurantes gerenciarem seus pedidos e atualizarem seus menus.
+# RapidiFly
+License
 
-Tecnologias utilizadas
-O projeto foi desenvolvido utilizando as seguintes tecnologias:
+## Descrição
+O RapidiFly é um aplicativo de entrega de comida que permite aos usuários pedir refeições de diversos restaurantes parceiros, diretamente pelo aplicativo. O aplicativo permite que o usuário selecione um restaurante próximo, visualize o menu e faça um pedido para entrega imediata ou agendada.
 
-Java 11
-Spring Framework
-Angular 12
-MySQL
-PayPal e PagSeguro APIs
-Funcionalidades
-Pesquisa de restaurantes e pratos
-Adição e remoção de itens do carrinho
-Opções de pagamento usando PayPal e PagSeguro
-Login e autenticação de usuários
-Controle de pedidos para os restaurantes
-Atualização de menu e gerenciamento de pedidos para os restaurantes
-Configuração
-Para rodar o projeto localmente, é necessário ter instalado na máquina:
+## Tecnologias
+O projeto é desenvolvido utilizando as seguintes tecnologias:
 
-Java 11
-Angular CLI
-MySQL
-Clone o repositório e execute os seguintes passos:
+- Java
+- Spring Boot
+- Angular
+- MySQL
+- PayPal API
+- PagSeguro API
+- Instalação e Configuração
 
-Backend
-Acesse a pasta backend e abra o projeto em sua IDE preferida
-Configure as informações de conexão do banco de dados no arquivo application.properties
-Rode o projeto e verifique se o servidor está executando corretamente
-Frontend
-Acesse a pasta frontend e abra um terminal
-Instale as dependências com o comando npm install
-Inicie o servidor com o comando ng serve
-Acesse http://localhost:4200 em seu navegador para acessar a aplicação
-Contribuindo
-Para contribuir com o projeto, faça o fork do repositório e envie um pull request com suas modificações. Certifique-se de que os testes estão passando e que o código está seguindo as boas práticas de desenvolvimento.
+## Requisitos
+- JDK 11
+- PostgreSQL
+- Angular CLI
+- Ionic
 
-Autores
-João da Silva - joaosilva@gmail.com
-Maria Souza - mariasouza@gmail.com
+## Clonar o repositório sh
+### Copy code
+- git clone https://github.com/rapidiFly/rapidiFly.git
+
+## Configurar o Banco de Dados
+- Crie um novo banco de dados no MySQL
+- Configure as credenciais de acesso ao banco de dados no arquivo application.properties
+- Execute o arquivo db.sql para criar as tabelas necessárias no banco de dados
+- Iniciar o Servidor Java
+- Acesse o diretório backend
+- Execute o comando ./mvnw spring-boot:run
+- Iniciar o Servidor Angular
+- Acesse o diretório frontend
+- Execute o comando ng serve
+
+## Contribuição
+### Contribuições são bem-vindas! Para contribuir com o projeto, siga os passos abaixo:
+
+- Faça um fork do repositório
+- Crie uma branch com sua feature ou correção de bug (git checkout -b minha-feature)
+- Faça um commit das suas alterações (git commit -m 'Adicionando minha feature')
+- Faça um push para a branch (git push origin minha-feature)
+- Abra um pull request
