@@ -11,11 +11,12 @@
       <button mat-icon-button class="icon-tollbar" (click)="drawer.toggle()" ngbTooltip="Menu">
         <mat-icon>menu</mat-icon>
       </button>
-
-      <button mat-icon-button class="icon-tollbar" (click)="logout()" style="margin-left: 90%;" ngbTooltip="Sair">
-        <mat-icon>logout</mat-icon>
-      </button>
-      <!-- <img mat-card-image src="/assets/Logo_desenho.jpg" class="img_logo"> -->
+    
+      <div class="ml-auto">
+        <button mat-icon-button class="icon-tollbar" (click)="logout()" ngbTooltip="Sair">
+          <mat-icon>logout</mat-icon>
+        </button>
+      </div>
     </mat-toolbar>
 
 <router-outlet></router-outlet>
