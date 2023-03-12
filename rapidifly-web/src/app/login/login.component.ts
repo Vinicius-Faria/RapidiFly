@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar, MatSnackBarHorizontalPosition } from '@angular/material/snack-bar';
 import { LoginService } from '../service/loginService';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private loginService: LoginService,
     private _snackBar: MatSnackBar,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -43,7 +45,7 @@ export class LoginComponent implements OnInit {
       this.loginService.verifica(this.form.value).subscribe(
         response => {
           if (response) {
-            this.openSnackBar('Carregando dados.', 'OK');
+            this.router.navigate(['/app/dashboard']);
           }else{
             this.openSnackBar('Usuário não encontrado.', 'OK');
           }

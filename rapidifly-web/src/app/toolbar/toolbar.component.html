@@ -1,0 +1,21 @@
+<mat-drawer-container class="container-drawer" autosize [hasBackdrop]="true">
+    <mat-drawer #drawer class="drawer-sidenav" mode="over">
+
+      <div class="title">
+        <h2>Portal de Controle</h2>
+      </div>
+  
+    </mat-drawer>
+
+    <mat-toolbar>
+      <button mat-icon-button class="icon-tollbar" (click)="drawer.toggle()" ngbTooltip="Menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <button mat-icon-button class="icon-tollbar" (click)="logout()" style="margin-left: 90%;" ngbTooltip="Sair">
+        <mat-icon>logout</mat-icon>
+      </button>
+      <!-- <img mat-card-image src="/assets/Logo_desenho.jpg" class="img_logo"> -->
+    </mat-toolbar>
+
+<router-outlet></router-outlet>

@@ -15,12 +15,20 @@ import { CommonModule } from '@angular/common';
 //componentes do angular material
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    DashboardComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FormsModule,
     MatSnackBarModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },    
