@@ -2,3 +2,15 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.panelClass{   
+    background-color: rgb(230, 230, 230);  
+    color:black;
+    box-shadow: 5px 5px #87CEFA;
+}
+
+.mat-simple-snackbar-action{
+    background: linear-gradient(to right, #87CEFA, #808080);
+    color: white;
+    border-radius: 25%;
+  }

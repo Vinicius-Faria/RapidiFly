@@ -1,0 +1,22 @@
+<div class="container">
+    <br><br><br><br><br><br><br><br><br>
+        <div class="card card-container">
+            <h1 class='login_title text-center'>RapidiFly</h1>
+            <hr>
+
+            <form class="form-signin" [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <p class="input_title">Nome</p>
+                    <input type="nome" id="nome" formControlName="nome" class="form-control" placeholder="Nome" autofocus style="border-radius: 15px;">
+                </div>
+                <div class="form-group">
+                    <p class="input_title">Senha</p>
+                    <input type="password" id="senha" formControlName="senha" class="form-control" placeholder="Senha" style="border-radius: 15px;">
+                    <br>
+                </div>
+                <button class="btn btn-lg" type="submit" style="color: rgb(255, 255, 255);" [disabled]="!form.valid">Entrar</button>
+                    <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+                    <small class="text-muted"> Design by Vinícius Faria ®</small>
+            </form>
+        </div>
+</div>

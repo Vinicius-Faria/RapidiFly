@@ -12,9 +12,9 @@ public class Login {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Nome;
+    private String nome;
 
-    private String Senha;
+    private String senha;
 
     public Long getId() {
         return id;
@@ -25,18 +25,18 @@ public class Login {
     }
 
     public String getNome() {
-        return Nome;
+        return nome;
     }
 
     public void setNome(String nome) {
-        Nome = nome;
+        this.nome = nome;
     }
 
     public String getSenha() {
-        return Senha;
+        return senha;
     }
 
     public void setSenha(String senha) {
-        Senha = senha;
+        this.senha = senha;
     }
 }

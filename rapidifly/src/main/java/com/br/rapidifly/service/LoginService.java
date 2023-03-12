@@ -15,10 +15,20 @@ public class LoginService implements BaseService<Login, Long> {
     @Autowired
     private LoginRepository loginRepository;
 
+    private static final String SALT = "SaltSecretPassWord2.0";
+
+    private final BCryptPasswordEncoder encoder;
+
+    public LoginService() {
+        this.encoder = new BCryptPasswordEncoder();
+    }
+
     @Override
     public Login save(Login login) {
         validate(login);
-        return loginRepository.save(criptografaLogin(criptografaLogin(login)));
+        String saltedPassword = login.getSenha() + SALT;
+        login.setSenha(encoder.encode(saltedPassword));
+        return loginRepository.save(login);
     }
 
     @Override
@@ -36,41 +46,31 @@ public class LoginService implements BaseService<Login, Long> {
 
     @Override
     public List<Login> findAll() {
-        return null;
+       return loginRepository.findAll();
     }
 
     @Override
     public void validate(Login login) {
 
-        if(!login.getNome().isEmpty() && !login.getSenha().isEmpty()){
+        if(login.getNome().isEmpty() && login.getSenha().isEmpty()){
             throw new InvalidOperationException("Login com dados vazios !");
         }
 
-        if(!login.getNome().isBlank() && !login.getSenha().isBlank()){
+        if(login.getNome().isBlank() && login.getSenha().isBlank()){
             throw new InvalidOperationException("Login com dados vazios !");
         }
 
     }
 
-    public Login verificaLogin(List<Login> login, Login loginUser){
+    public boolean verificaLogin(List<Login> login, Login loginUser){
 
-        for (Login log: login) {
-            if(log.getNome().equalsIgnoreCase(loginUser.getNome())){
-                if(log.getSenha().equalsIgnoreCase(loginUser.getSenha())){
-                    return loginUser;
-                }
+        for (Login log : login) {
+            if (log.getNome().equalsIgnoreCase(loginUser.getNome())) {
+                String saltedPassword = loginUser.getSenha() + SALT;
+                return encoder.matches(saltedPassword, log.getSenha());
             }
         }
-
         throw new InvalidOperationException("Usuário não encontrado.");
 
-    }
-
-    private Login criptografaLogin(Login login){
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        String senhacripto = encoder.encode(login.getSenha());
-        login.setSenha(senhacripto);
-
-        return login;
     }
 }

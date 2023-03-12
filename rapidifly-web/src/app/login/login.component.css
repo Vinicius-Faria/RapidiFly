@@ -1,0 +1,96 @@
+.container{
+    height: 80%;
+}
+
+.login_box{
+    background:#f7f7f7;
+    border:3px solid #F4F4F4;
+    padding-left: 15px;
+    margin-bottom:25px;
+    }
+  
+  .input_title{
+    color:rgba(164, 164, 164, 0.9);
+    padding-left:3px;
+    margin-bottom: 2px;
+  }
+  
+  hr{
+    width:100%;
+  }
+    
+  
+  .login_title{
+    font-family: "myriad-pro",sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color:rgba(106, 106, 106, 0.44);
+  }
+  
+  .card-container.card {
+    max-width: 350px;
+  
+  }
+  
+  .btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    border-radius:0;
+    background:#43A6EB;
+    height: 55px;
+    margin-bottom:10px;
+  }
+  
+  /*
+  * Card component
+  */
+  .card {
+    background-color: #FFFFFF;
+    /* just in case there no content*/
+    padding: 1px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 15%x;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 15px;
+    -moz-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .form-signin input[type=email],
+  .form-signin input[type=password],
+  .form-signin input[type=text],
+  .form-signin button {
+    width: 100%;
+    display: block;
+  
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .btn{
+    background: linear-gradient(to right, #87CEFA, #808080);
+    border-radius: 14px;
+  }
+
+  ::ng-deep .mat-progress-bar-fill::after {
+    background: linear-gradient(to right, #87CEFA, #808080);
+  }
+    
+  ::ng-deep .mat-progress-bar-buffer {
+    background: #E4E8EB;
+  }
+    
+  ::ng-deep .mat-progress-bar {
+      border-radius: 15px;
+  }
+
